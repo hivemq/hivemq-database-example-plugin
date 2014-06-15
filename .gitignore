@@ -1,0 +1,4 @@
+/target/
+/hivemq-database-example-plugin.iml
+/dependency-reduced-pom.xml
+/.idea/
