@@ -2,13 +2,13 @@
  * Copyright (C) dc-square GmbH - All Rights Reserved
  */
 
-package com.dcsquare.hivemq.example.database;
+package com.hivemq.example.database;
 
-import com.dcsquare.hivemq.example.database.callbacks.DBAuthenticationCallback;
-import com.dcsquare.hivemq.example.database.callbacks.PersistMessagesCallback;
-import com.dcsquare.hivemq.example.database.callbacks.ShutdownCallback;
-import com.dcsquare.hivemq.spi.PluginEntryPoint;
-import com.dcsquare.hivemq.spi.callback.registry.CallbackRegistry;
+import com.hivemq.example.database.callbacks.DBAuthenticationCallback;
+import com.hivemq.example.database.callbacks.PersistMessagesCallback;
+import com.hivemq.example.database.callbacks.ShutdownCallback;
+import com.hivemq.spi.PluginEntryPoint;
+import com.hivemq.spi.callback.registry.CallbackRegistry;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;

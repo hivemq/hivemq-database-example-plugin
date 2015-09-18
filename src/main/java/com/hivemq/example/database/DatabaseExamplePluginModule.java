@@ -1,26 +1,22 @@
-package com.dcsquare.hivemq.example.database;
+package com.hivemq.example.database;
 
-import com.dcsquare.hivemq.spi.HiveMQPluginModule;
-import com.dcsquare.hivemq.spi.PluginEntryPoint;
-import com.dcsquare.hivemq.spi.plugin.meta.Information;
-import com.google.inject.Provider;
 import com.google.inject.Provides;
+import com.hivemq.spi.HiveMQPluginModule;
+import com.hivemq.spi.PluginEntryPoint;
+import com.hivemq.spi.plugin.meta.Information;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import org.apache.commons.configuration.AbstractConfiguration;
 
 import javax.inject.Singleton;
 import java.sql.Connection;
 import java.sql.SQLException;
-
-import static com.dcsquare.hivemq.spi.config.Configurations.noConfigurationNeeded;
 
 /**
  * @author Dominik Obermaier
  */
 @Information(
         name = "Database Example Plugin",
-        version = "1.0-SNAPSHOT",
+        version = "3.0",
         author = "dc-square GmbH",
         description = "A example plugin which persists every message to the database and authenticates clients from the database")
 public class DatabaseExamplePluginModule extends HiveMQPluginModule {
@@ -41,8 +37,8 @@ public class DatabaseExamplePluginModule extends HiveMQPluginModule {
         config.setMaximumPoolSize(15);
         config.setDataSourceClassName("com.mysql.jdbc.jdbc2.optional.MysqlDataSource");
         config.addDataSourceProperty("serverName", "localhost");
-        config.addDataSourceProperty("port", "8889");
-        config.addDataSourceProperty("databaseName", "HiveMQ");
+        config.addDataSourceProperty("port", "3306");
+        config.addDataSourceProperty("databaseName", "HiveMQ3");
         config.addDataSourceProperty("user", "root");
         config.addDataSourceProperty("password", "root");
 
@@ -54,12 +50,6 @@ public class DatabaseExamplePluginModule extends HiveMQPluginModule {
 
         return new HikariDataSource(config);
 
-    }
-
-    @Override
-    public Provider<Iterable<? extends AbstractConfiguration>> getConfigurations() {
-        //You probably want an external file configuration
-        return noConfigurationNeeded();
     }
 
     @Override

@@ -1,7 +1,7 @@
-package com.dcsquare.hivemq.example.database.callbacks;
+package com.hivemq.example.database.callbacks;
 
-import com.dcsquare.hivemq.spi.callback.CallbackPriority;
-import com.dcsquare.hivemq.spi.callback.events.broker.OnBrokerStop;
+import com.hivemq.spi.callback.CallbackPriority;
+import com.hivemq.spi.callback.events.broker.OnBrokerStop;
 import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

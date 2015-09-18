@@ -4,18 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dcsquare.hivemq</groupId>
+    <groupId>com.hivemq</groupId>
     <artifactId>hivemq-database-example-plugin</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>3.0</version>
 
 
-    <inceptionYear>2014</inceptionYear>
+    <inceptionYear>2015</inceptionYear>
     <organization>
         <name>dc-square GmbH</name>
         <url>http://www.dc-square.de</url>
     </organization>
 
     <developers>
+        <developer>
+            <id>flimpoec</id>
+            <name>Florian Limpöck</name>
+            <email>florian.limpoeck@dc-square.de</email>
+            <organization>dc-square GmbH</organization>
+            <organizationUrl>http://www.dc-square.de</organizationUrl>
+        </developer>
         <developer>
             <id>dobermai</id>
             <name>Dominik Obermaier</name>
@@ -30,7 +37,7 @@
         <dependency>
             <groupId>com.hivemq</groupId>
             <artifactId>hivemq-spi</artifactId>
-            <version>2.0.0</version>
+            <version>3.0.0-SNAPSHOT</version>
         </dependency>
         <!-- Database dependencies -->
         <dependency>
@@ -54,8 +61,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -71,7 +78,7 @@
                         <configuration>
                             <artifactSet>
                                 <excludes>
-                                    <exclude>com.dcsquare.hivemq:hivemq-spi</exclude>
+                                    <exclude>com.hivemq:hivemq-spi</exclude>
                                     <exclude>com.google.inject:*</exclude>
                                     <exclude>com.google.guava:*</exclude>
                                     <exclude>org.slf4j:*</exclude>
@@ -91,9 +98,9 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>com.dcsquare</groupId>
+                        <groupId>com.hivemq</groupId>
                         <artifactId>hivemq-maven-plugin</artifactId>
-                        <version>1.0.0</version>
+                        <version>3.0.0</version>
                         <executions>
                             <execution>
                                 <id>hivemq</id>
@@ -102,8 +109,8 @@
                                     <goal>hivemq</goal>
                                 </goals>
                                 <configuration>
+                                    <hiveMQDir>FIXME, insert your HiveMQ directory here!</hiveMQDir>
                                     <debugMode>SERVER</debugMode>
-                                    <hiveMQDir>/Users/dobermai/Downloads/hivemq-2.0.0</hiveMQDir>
                                 </configuration>
                             </execution>
                         </executions>
