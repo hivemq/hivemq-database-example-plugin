@@ -37,7 +37,7 @@
         <dependency>
             <groupId>com.hivemq</groupId>
             <artifactId>hivemq-spi</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
+            <version>3.0.0</version>
         </dependency>
         <!-- Database dependencies -->
         <dependency>
@@ -100,7 +100,7 @@
                     <plugin>
                         <groupId>com.hivemq</groupId>
                         <artifactId>hivemq-maven-plugin</artifactId>
-                        <version>3.0.0</version>
+                        <version>3.0.1</version>
                         <executions>
                             <execution>
                                 <id>hivemq</id>
