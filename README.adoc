@@ -1,0 +1,8 @@
+= Contributing
+
+If you want to contribute to HiveMQ Database Example Plugin, see the link:CONTRIBUTING.md[contribution guidelines].
+
+= License
+
+HiveMQ Database Example Plugin is licensed under the `APACHE LICENSE, VERSION 2.0`. A copy of the license can be found link:LICENSE.txt[here].
+
